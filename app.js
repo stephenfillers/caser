@@ -1,11 +1,21 @@
-let input = document.querySelector('#caserInput');
-let output = document.querySelector('#caserOutput');
-let sentence = '';
+const input = document.querySelector('#caserInput');
+const uppercaseButton = document.querySelector('#uppercaseButton');
+const lowercaseButton = document.querySelector('#lowercaseButton');
+const titleCaseButton = document.querySelector('#titleCaseButton');
+let text = '';
 
-input.addEventListener('input', event => {
+uppercaseButton.addEventListener('click', event => {
+    input.value = input.value.toUpperCase();
+})
+
+lowercaseButton.addEventListener('click', event => {
+    input.value = input.value.toLowerCase();;
+})
+
+titleCaseButton.addEventListener('click', event => {
     sentence = input.value.toLowerCase().split(' ');
     for (let i = 0; i < sentence.length; i++) {
         sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
     }
-    output.textContent = sentence.join(' ');
+    input.value = sentence.join(' ');
 })

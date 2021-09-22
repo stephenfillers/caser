@@ -19,22 +19,31 @@
             <div class="col-md-8 py-3">
 
                 <div class="row">
-                    <h1 class="display-3">Hi, I'm <b>Caser</b>! I can change any sentence to title case.</h1>
+                    <h1 class="display-3">Hi, I'm <b>Caser</b>! I can change the case of any text.</h1>
                 </div>
 
                 <div class="row py-3">
                     <form>
                         <div class="mb-3">
-                            <label class="form-label display-6 mb-3" for="caserInput">Which sentence needs
-                                adjusting?</label>
-                            <input class="form-control" id="caserInput" type="text" placeholder="Paste your text here">
+                            <label class="form-label display-6 mb-3" for="caserInput">What text needs adjusting?</label>
+                            <textarea class="form-control" id="caserInput" placeholder="Paste your text here"
+                                rows="5"></textarea>
                         </div>
                     </form>
 
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="titleCaseButton" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="titleCaseButton">Title Case</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="uppercaseButton" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="uppercaseButton">Uppercase</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="lowercaseButton" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="lowercaseButton">Lowercase</label>
+                    </div>
+
                 </div>
-                <div class="row py-3">
-                    <p id="caserOutput" class="text-center h4"></p>
-                </div>
+
 
             </div>
         </div>
