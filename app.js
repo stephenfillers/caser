@@ -2,7 +2,6 @@ const input = document.querySelector('#caserInput');
 const uppercaseButton = document.querySelector('#uppercaseButton');
 const lowercaseButton = document.querySelector('#lowercaseButton');
 const titleCaseButton = document.querySelector('#titleCaseButton');
-let text = '';
 
 uppercaseButton.addEventListener('click', event => {
     input.value = input.value.toUpperCase();
