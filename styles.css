@@ -1,0 +1,14 @@
+.body-dark-mode {
+    background-color: #20293e;
+    color: #9cb3ea;
+}
+
+.button-dark-mode {
+    background-color: black;
+}
+
+.input-dark-mode, .input-dark-mode:focus {
+    background: #151b29;
+    color: #9cb3ea;
+    border: black;
+}
