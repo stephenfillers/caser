@@ -13,7 +13,7 @@ lowercaseButton.addEventListener('click', event => {
 })
 
 titleCaseButton.addEventListener('click', event => {
-    sentence = input.value.toLowerCase().split(' ');
+    sentence = input.value.toLowerCase().split(' ').filter(String);
     for (let i = 0; i < sentence.length; i++) {
         sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
     }
