@@ -5,59 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caser | Your Friendly Sentence Caser App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Caser, Your Friendly Text Casing App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="text-center">
+<body>
+    
 
     <div class="container">
+        <!-- <button id="darkModeButton">x</button> -->
+        
+        <div class="page-content">
+            <h1>Hi, I'm <span id="caser-text">Caser</span>! I can change the case of any text.</h1>
+            <h2>What text needs adjusting?</h2>
 
-        <div class="nav justify-content-end">
-            <button id="darkModeButton" class="btn btn-outline-primary bi bi-moon-stars m-4"></button>
-        </div>
+            <textarea class= "caser-form" id="caserInput" placeholder="Paste your text here" rows="10"></textarea>
 
-        <div class="row justify-content-center">
-            <div class="col-md-8 py-3">
-
-                <div class="row">
-                    <h1 class="display-3">Hi, I'm <b>Caser</b>! I can change the case of any text.</h1>
-                </div>
-
-                <div class="row py-3">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label display-6 mb-3" for="caserInput">What text needs adjusting?</label>
-                            <textarea class="form-control" id="caserInput" placeholder="Paste your text here"
-                                rows="10"></textarea>
-                        </div>
-                    </form>
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-
-                        <input type="radio" class="btn-check" name="btnradio" id="titleCaseButton" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="titleCaseButton">Title Case</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" id="uppercaseButton" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="uppercaseButton">Uppercase</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" id="lowercaseButton" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="lowercaseButton">Lowercase</label>
-
-                    </div>
-                </div>
-
+            <div class="button-group">
+                <div id="titleCaseButton">Title Case</div>
+                <div id="listCaseButton">List Case</div>
+                <div id="uppercaseButton">Uppercase</div>
+                <div id="lowercaseButton">Lowercase</div>
             </div>
+
         </div>
 
     </div>
 
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
