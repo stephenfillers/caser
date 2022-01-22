@@ -30,6 +30,7 @@ h2 {
     align-items: center;
     height: 100vh;
     width: 70%;
+    max-width: 1000px;
     position: relative;
 }
 
@@ -49,6 +50,7 @@ h2 {
 }
 
 .button-group > div {
+    box-sizing: border-box;
     font-weight: 500;
     display: inline-block;
     background: #6f00ff;
@@ -111,4 +113,38 @@ h2 {
 	0% { background-position: 0px 50%; }
 	50% { background-position: 100% 50%; }
 	100% { background-position: 0px 50%; }
+}
+
+
+@media(max-width: 750px) {
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1.5em;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 44px;
+        line-height: 56px;
+        margin-top: 1em;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin: 1em 0 0 0;
+    }
+
+    .button-group {
+        margin-bottom: 1em;
+    }
+
+    .button-group > div {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    .caser-form {
+        margin: 2.5em 0;
+    }
 }
