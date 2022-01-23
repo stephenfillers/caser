@@ -9,6 +9,11 @@
 
 body {
     background: #f9f5ff;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
 }
 
 h1 {
@@ -23,19 +28,50 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-.container {
+.page-container {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 70%;
     max-width: 1000px;
-    position: relative;
+}
+
+.darkModeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.25em;
+    background: #6f00ff;
+    color: white;
+}
+
+.darkModeButton:hover {
+    cursor: pointer;
+    background: #5800ca;
 }
 
 .page-content {
     text-align: center;
+}
+
+#caser-text {
+    font-weight: 700;
+	background: linear-gradient(90deg,#6f00ff, #e700e7);
+	background-size: 500%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	animation: animated_text 5s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
 }
 
 .caser-form {
@@ -66,68 +102,48 @@ h2 {
     background: #5800ca;
 }
 
+/* dark mode */
+
 .body-dark-mode {
-    background-color: #20293e;
-    color: #9cb3ea;
+    background-color: #1c0a37;
+    color: #fff;
 }
 
-.button-dark-mode {
-    background-color: black;
+.input-dark-mode {
+    background: #2e0e5e;
+    color: #fff;
 }
-
-.input-dark-mode, .input-dark-mode:focus {
-    background: #151b29;
-    color: #9cb3ea;
-    border-color: #7b819c;
-}
-
-#caser-text {
-    font-weight: 700;
-	background: linear-gradient(90deg,#6f00ff, #e700e7);
-	background-size: 500%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-	animation: animated_text 5s ease-in-out infinite;
-}
-
-#darkModeButton {
-    padding: 0.5em 1em;
-    margin: 1em;
-    position: absolute;
-    justify-self: flex-end;
-    align-self: flex-start;
-    right: 0;
-    background: #6f00ff;
-    border: none;
-    border-radius: 0.25em;
-    outline: none;
-    color: white;
-}
-
-#darkModeButton:hover {
-    cursor: pointer;
-    background: #5800ca;
-}
-
-@keyframes animated_text {
-	0% { background-position: 0px 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0px 50%; }
-}
-
 
 @media(max-width: 750px) {
-    .container {
-        box-sizing: border-box;
+    .page-container {
+        height: unset;
         width: 100%;
+        box-sizing: border-box;
         padding: 1.5em;
-        align-items: flex-start;
+        flex-direction: column;
+        /* align-items: flex-start; */
+
+    }
+
+    .page-content {
+        width: 100%;
+    }
+
+    .darkModeButton {
+        position: static;
+        margin: 0.5em auto 5em auto;
+        width: 90%;
+        
+    }
+
+    .darkModeButton-mobile {
+        background: #2a1051;
     }
 
     h1 {
         font-size: 44px;
         line-height: 56px;
-        margin-top: 1em;
+        /* margin-top: 1em; */
     }
 
     h2 {

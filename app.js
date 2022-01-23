@@ -3,7 +3,7 @@ const titleCaseButton = document.querySelector('#titleCaseButton');
 const listCaseButton = document.querySelector('#listCaseButton');
 const uppercaseButton = document.querySelector('#uppercaseButton');
 const lowercaseButton = document.querySelector('#lowercaseButton');
-const darkModeButton = document.querySelector('#darkModeButton')
+const darkModeButton = document.querySelector('.darkModeButton')
 
 titleCaseButton.onclick = titleCase;
 listCaseButton.onclick = listCase;
@@ -51,11 +51,11 @@ function lowerCase() {
 
 function darkMode() {
     document.body.classList.toggle('body-dark-mode');
-    darkModeButton.classList.toggle('btn-outline-secondary');
+    darkModeButton.classList.toggle('darkModeButton-mobile');
     input.classList.toggle('input-dark-mode');
-    if (darkModeButton.classList.contains('bi-moon-stars')) {
-        darkModeButton.classList.replace('bi-moon-stars', 'bi-brightness-high');
+    if (darkModeButton.innerText === 'Turn off the lights') {
+        darkModeButton.innerText = 'Turn on the lights';
     } else {
-        darkModeButton.classList.replace('bi-brightness-high', 'bi-moon-stars');
+        darkModeButton.innerText = 'Turn off the lights';
     }
 };
