@@ -50,10 +50,6 @@ function lowerCase() {
     input.value = input.value.toLowerCase();
 }
 
-if (darkMode === 'enabled') {
-    enableDarkMode();
-}
-
 function enableDarkMode() {
     document.body.classList.add('body-dark-mode');
     darkModeButton.classList.add('darkModeButton-mobile');
@@ -72,7 +68,12 @@ function disableDarkMode() {
     localStorage.setItem('darkMode', 'disabled');
 }
 
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
 function toggleDarkMode() {
+    darkMode = localStorage.getItem('darkMode');
     if (darkMode !== 'enabled') {
         enableDarkMode();
     } else {
