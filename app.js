@@ -3,13 +3,14 @@ const titleCaseButton = document.querySelector('#titleCaseButton');
 const listCaseButton = document.querySelector('#listCaseButton');
 const uppercaseButton = document.querySelector('#uppercaseButton');
 const lowercaseButton = document.querySelector('#lowercaseButton');
-const darkModeButton = document.querySelector('.darkModeButton')
+const darkModeButton = document.querySelector('.darkModeButton');
+let darkMode = localStorage.getItem('darkMode');
 
 titleCaseButton.onclick = titleCase;
 listCaseButton.onclick = listCase;
 uppercaseButton.onclick = upperCase;
 lowercaseButton.onclick = lowerCase;
-darkModeButton.onclick = darkMode;
+darkModeButton.onclick = toggleDarkMode;
 
 function titleCase() {
 
@@ -49,13 +50,32 @@ function lowerCase() {
     input.value = input.value.toLowerCase();
 }
 
-function darkMode() {
-    document.body.classList.toggle('body-dark-mode');
-    darkModeButton.classList.toggle('darkModeButton-mobile');
-    input.classList.toggle('input-dark-mode');
-    if (darkModeButton.innerText === 'Turn off the lights') {
-        darkModeButton.innerText = 'Turn on the lights';
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+function enableDarkMode() {
+    document.body.classList.add('body-dark-mode');
+    darkModeButton.classList.add('darkModeButton-mobile');
+    input.classList.add('input-dark-mode');
+    darkModeButton.innerText = 'Turn on the lights';
+
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+function disableDarkMode() {
+    document.body.classList.remove('body-dark-mode');
+    darkModeButton.classList.remove('darkModeButton-mobile');
+    input.classList.remove('input-dark-mode');
+    darkModeButton.innerText = 'Turn off the lights';
+
+    localStorage.setItem('darkMode', 'disabled');
+}
+
+function toggleDarkMode() {
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
     } else {
-        darkModeButton.innerText = 'Turn off the lights';
+        disableDarkMode();
     }
-};
+}

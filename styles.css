@@ -63,6 +63,7 @@ h2 {
     font-weight: 700;
 	background: linear-gradient(90deg,#6f00ff, #e700e7);
 	background-size: 500%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	animation: animated_text 5s ease-in-out infinite;
