@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caser, Your Friendly Text Casing App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="page-container">
+      <button class="darkModeButton">Turn off the lights</button>
 
-        <button class="darkModeButton">Turn off the lights</button>
+      <div class="page-content">
+        <h1>
+          Hi, I'm <span id="caser-text">Caser</span>! I can change the case of
+          any text.
+        </h1>
+        <h2>What text needs adjusting?</h2>
 
-        <div class="page-content">
-            <h1>Hi, I'm <span id="caser-text">Caser</span>! I can change the case of any text.</h1>
-            <h2>What text needs adjusting?</h2>
+        <textarea
+          class="caser-form"
+          id="caserInput"
+          placeholder="Paste your text here"
+          rows="10"
+        ></textarea>
 
-            <textarea class= "caser-form" id="caserInput" placeholder="Paste your text here" rows="10"></textarea>
-
-            <div class="button-group">
-                <div id="titleCaseButton">Title Case</div>
-                <div id="listCaseButton">List Case</div>
-                <div id="uppercaseButton">Uppercase</div>
-                <div id="lowercaseButton">Lowercase</div>
-            </div>
+        <div class="button-group">
+          <div id="titleCaseButton">Title Case</div>
+          <div id="listCaseButton">List Case</div>
+          <div id="uppercaseButton">Uppercase</div>
+          <div id="lowercaseButton">Lowercase</div>
         </div>
-
+      </div>
     </div>
 
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
